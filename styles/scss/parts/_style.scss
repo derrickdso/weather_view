@@ -12,6 +12,7 @@
   }
   
   #root {
+    width: 100em;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -37,12 +38,20 @@
   }
   
   .container {
+    width:100%;
     display: flex;
     flex-wrap: wrap;
   }
   
+  @media screen and (max-width: 425px) {
+    .container{
+      display:block;
+    }
+  }
+  
   .card {
     margin: 1rem;
+    width:250px;
     background: white;
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 12px;
@@ -53,18 +62,6 @@
   .card:hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
-  }
-  
-  @media screen and (min-width: 600px) {
-    .card {
-      flex: 1 1 calc(50% - 2rem);
-    }
-  }
-  
-  @media screen and (min-width: 900px) {
-    .card {
-      flex: 1 1 calc(33% - 2rem);
-    }
   }
   
   .card:nth-child(2n) h1 {

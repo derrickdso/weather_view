@@ -5,19 +5,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ghibli App</title>
+  <title>URBN APP</title>
   
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="styles/css/main.css" rel="stylesheet">
 
 </head>
 
 <body>
 
   <div id="root"></div>
-  <input id="zipcode" type="text" onchange="get_weather()" />
+  <div class="input-group">
+    <div class="has-float-label">
+      <input id="zipcode" type="text" placeholder="code" onchange="get_weather()"/>
+      <label for="zipcode">Zip</label>
+    </div>
+
+
+
+
   <script src="scripts.js"></script>
 </body>
 
 </html>
-
