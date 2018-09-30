@@ -19,17 +19,40 @@ function get_weather()
         card.setAttribute('class', 'card');
 
         const h1 = document.createElement('h1');
-        h1.textContent = `The Weather in ${response['name']}`;
-
         const p = document.createElement('p');
-        p.textContent = `${response["weather"][0]["description"]}...`;
+        const img = document.createElement('img');
+        let id = response["weather"][0]["id"];
+
+        h1.textContent = `The Weather in ${response['name']}: ${response["weather"][0]["description"]}`;
+
+        if(id >= 200 && id < 300){
+          img.src = "./svg/040-jacket-3.svg";  
+          p.textContent = `URBN Suggests: `;
+        }
+        else if(id >= 300 && id < 400){
+          img.src = "./svg/016-umbrella.svg";  
+          p.textContent = `URBN Suggests: `;
+        }
+        else if(id >= 500 && id < 600){
+          img.src = "./svg/001-coat.svg";  
+          p.textContent = `URBN Suggests: `;
+        }
+        else if(id >= 700 && id < 800){
+          img.src = "./svg/018-cape.svg";  
+          p.textContent = `URBN Suggests: `;
+        }
+        else if(id >= 800 && id < 900){
+          img.src = "./svg/031-witch-hat.svg";  
+          p.textContent = `URBN Suggests: Go Halloween!`;
+        }
 
         container.appendChild(card);
         card.appendChild(h1);
         card.appendChild(p);
+        card.appendChild(img);
     } else {
       const errorMessage = document.createElement('marquee');
-      errorMessage.textContent = `Gah, it's not working!`;
+      errorMessage.textContent = `Sad, it's not working!`;
       app.appendChild(errorMessage);
     }
   }
