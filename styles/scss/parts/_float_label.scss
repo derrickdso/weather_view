@@ -30,7 +30,7 @@
 
 @mixin float-label-scaled {
   &:placeholder-shown:not(:focus) + * {
-      font-size: 150%;
+      font-size: 1;
       padding-left: 10px;
       padding-bottom: 10px;
       opacity: .5;
