@@ -26,24 +26,29 @@ function get_weather()
         h1.textContent = `The Weather in ${response['name']}: ${response["weather"][0]["description"]}`;
 
         if(id >= 200 && id < 300){
-          img.src = "./svg/040-jacket-3.svg";  
-          p.textContent = `URBN Suggests: `;
+          img.src = "./icons/040-jacket-3.svg";  
+          p.textContent = `URBN Suggests: Herschel Supply Co. Forecast Rain Coat`;
+          card.setAttribute("onclick", "location.href='https://www.urbanoutfitters.com/shop/herschel-supply-co-forecast-rain-coat?category=jackets-coats-for-women&color=029'");
         }
         else if(id >= 300 && id < 400){
-          img.src = "./svg/016-umbrella.svg";  
-          p.textContent = `URBN Suggests: `;
+          img.src = "./icons/016-umbrella.svg";  
+          p.textContent = `URBN Suggests: Bubble Umbrella`;
+          card.setAttribute("onclick", "location.href='https://www.urbanoutfitters.com/shop/bubble-umbrella'");
         }
         else if(id >= 500 && id < 600){
-          img.src = "./svg/001-coat.svg";  
-          p.textContent = `URBN Suggests: `;
+          img.src = "./icons/001-coat.svg";  
+          p.textContent = `URBN Suggests: Carmella Cozy Reversible Coat`;
+          card.setAttribute("onclick", "location.href='https://www.urbanoutfitters.com/shop/uo-carmella-cozy-reversible-coat2?adpos=1o1&cm_mmc=SEM-_-Google-_-PLA-_-414308617111_condition_new_product_type_womens_product_type_apparel_product_t&color=061&creative=251335296627&device=c&gclid=Cj0KCQjw6MHdBRCtARIsAEigMxH653gAHg7qB8l-k2qnduvz6QiXicUjpV1hpqELNCARl7OD4QqOPygaAg8HEALw_wcB&inventoryCountry=US&matchtype=&mrkgadid=3275540864&mrkgcl=671&network=g&product_id=47408018&utm_campaign=BRAND_SHOPPING'");
         }
         else if(id >= 700 && id < 800){
-          img.src = "./svg/018-cape.svg";  
-          p.textContent = `URBN Suggests: `;
+          img.src = "./icons/050-bow.svg";  
+          p.textContent = `URBN Suggests: Darling Draped Bow Scrunchie`;
+          card.setAttribute("onclick", "location.href='https://www.urbanoutfitters.com/shop/darling-draped-bow-scrunchie'");
         }
         else if(id >= 800 && id < 900){
-          img.src = "./svg/031-witch-hat.svg";  
+          img.src = "./icons/031-witch-hat.svg";  
           p.textContent = `URBN Suggests: Go Halloween!`;
+          card.setAttribute("onclick", "location.href='https://www.urbanoutfitters.com/shop/skeleton-catsuit-halloween-costume'");
         }
 
         container.appendChild(card);
